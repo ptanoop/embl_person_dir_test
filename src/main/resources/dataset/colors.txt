@@ -1,0 +1,50 @@
+Amaranth,#E52B50
+Amber,#FFBF00
+Azure,#007FFF
+Beige,#F5F5DC
+Black,#000000
+Blue,#0000FF
+Bronze,#CD7F32
+Brown,#964B00
+Carmine,#960018
+Chocolate,#7B3F00
+Cobalt blue,#0047AB
+Coffee,#6F4E37
+Copper,#B87333
+Desert sand,#EDC9Af
+Electric blue,#7DF9FF
+Emerald,#50C878
+Erin,#00FF3F
+Gold,#FFD700
+Gray,#808080
+Green,#008000
+Harlequin,#3FFF00
+Indigo,#4B0082
+Ivory,#FFFFF0
+Jade,#00A86B
+Jungle green,#29AB87
+Lavender,#B57EDC
+Lemon,#FFF700
+Lime,#BFFF00
+Magenta,#FF00FF
+Magenta rose,#FF00AF
+Maroon,#800000
+Navy blue,#000080
+Olive,#808000
+Orange,#FF6600
+Orchid,#DA70D6
+Persian blue,#1C39BB
+Pink,#FD6C9E
+Plum,#8E4585
+Prussian blue,#003153
+Purple,#800080
+Raspberry,#E30B5C
+Red,#FF0000
+Rose,#FF007F
+Ruby,#E0115F
+Salmon,#FA8072
+Sapphire,#0F52BA
+Silver,#C0C0C0
+Violet,#7F00FF
+White,#FFFFFF
+Yellow,#FFFF00

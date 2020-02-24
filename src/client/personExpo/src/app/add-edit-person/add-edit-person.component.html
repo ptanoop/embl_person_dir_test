@@ -1,0 +1,54 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center" >
+    <mat-card  style="background-color: burlywood;width:500px">
+      <mat-card-title>Add / Edit Person</mat-card-title>
+      <form [formGroup]="angForm" (ngSubmit)="submitValues()">
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="First Name" formControlName="firstName" id="firstName">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('firstName', 'required')">First Name is required</mat-error>
+          <mat-error *ngIf="hasError('firstName', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Last Name" formControlName="lastName" id="lastName">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('lastName', 'required')">Last Name is required</mat-error>
+          <mat-error *ngIf="hasError('lastName', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Age" formControlName="age" id="age">
+          <mat-error *ngIf="hasError('age', 'required')">age is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <h4>Choose Favourite Color</h4>
+          <mat-select formControlName="colorCombined" >
+            <mat-option *ngFor="let colorVal of colorList" [value]="colorVal.colorCombined">
+              {{colorVal.colorName}}
+              &nbsp;
+              <span style="width:20px;height:20px;float:right;padding: 10px" [ngStyle]="{'background-color' : colorVal.colorCode}"></span>
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-select multiple formControlName="hobbies" >
+            <mat-option *ngFor="let hobby of hobbyList" [value]="hobby">
+              {{hobby}}
+              <span style="width:20px;height:20px;background-color: coral"></span>
+            </mat-option>
+          </mat-select>
+  
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" [disabled]="!angForm.valid" *ngIf="action=='add'" (click)="submitValues('add')">Add</button>
+        <button mat-raised-button color="primary" [disabled]="!angForm.valid" *ngIf="action=='edit'" (click)="submitValues('save')">Save</button>
+        <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+    </form>
+    </mat-card>
+  </section>
+  

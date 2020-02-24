@@ -1,0 +1,84 @@
+
+<mat-card style="width:90%;background-color: antiquewhite;padding-bottom:40px">
+    <mat-card-title>
+        <span class="">Person Directory</span>
+        <span class="headerInfoElements">Total Elements - {{ totalElements }}</span>
+        
+        <span class="headerInfoElements">Total Pages - {{ totalPages }}</span>
+        
+        <span class="headerInfoElements">Current Page - {{ pageNumber + 1 }}</span>
+    </mat-card-title>
+    <mat-card-content >
+
+        <table mat-table [dataSource]="personDataset" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="fullName">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="age">
+              <th mat-header-cell *matHeaderCellDef> Age </th>
+              <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="favouriteColor">
+              <th mat-header-cell *matHeaderCellDef> Favourite Color </th>
+              <td mat-cell *matCellDef="let element"> 
+                    <span>{{element.colorName}}</span>
+                    &nbsp;
+                    <span class="colorspan" [style.background]="element.colorCode"></span>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="hobby">
+                <th mat-header-cell *matHeaderCellDef> Hobbies </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="hobbyspan" *ngFor="let hb of element.hobby">{{hb}}</span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-raised-button class="actionButton" (click)="openEditPersonDialog(element)">
+                        <i class="material-icons">edit</i>
+                      </button>
+                      &nbsp;
+                      <button mat-raised-button class="actionButton" (click)="openDeleteDialog(element)" >
+                        <i class="material-icons">delete_forever</i>
+                      </button>
+                </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="['position', 'fullName', 'age', 'favouriteColor', 'hobby', 'actions']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['position', 'fullName', 'age', 'favouriteColor', 'hobby', 'actions'];"></tr>
+          </table>
+        
+    </mat-card-content>
+    <mat-card-footer>
+        <button mat-raised-button  class="actionButton" style="float:right;margin-right:50px" (click)="fetchNextDataset()">
+            <i class="material-icons">fast_forward</i>
+        </button>
+        &nbsp;
+        <button mat-raised-button class="actionButton" style="float:right;margin-right:10px" (click)="fetchPrevDataset()" >
+            <i class="material-icons">fast_rewind</i>
+        </button>
+        &nbsp;
+        <button mat-raised-button class="actionButton" style="float:left;margin-left:20px" (click)="openAddPersonDialog()" >
+            <i class="material-icons">library_add</i>
+        </button>
+    </mat-card-footer>
+</mat-card>

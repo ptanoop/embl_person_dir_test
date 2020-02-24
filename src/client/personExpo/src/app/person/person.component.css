@@ -1,0 +1,47 @@
+
+th.mat-header-cell{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+td.mat-cell{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.hobbyspan{
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px;
+    color: lightyellow;
+    background-color: palevioletred;
+    font-weight: bold;
+  }
+  
+  .colorspan{
+    width:20px;
+    height: 20px;
+    float:right;
+    margin-right:20px;
+    margin-top: -5px;
+    border:2px solid black;
+  }
+
+  .actionButton{
+    background-color: #4a78de;
+    height: 30px;
+    line-height: 30px;
+    color: aliceblue;
+  }
+
+  .headerInfoElements{
+    padding: 10px;
+    margin-right:10px;
+    margin-top:-5px;
+    background: burlywood;
+    font-size: 12px;
+    border-radius: 19px;
+    float: right;
+  }
