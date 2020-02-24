@@ -9,7 +9,7 @@ This is a maven project using spring boot. A front-end application built using a
 
 So directory structure is 
 
-'''''embl_person_dir_test/src''''' contains the java code.
+``embl_person_dir_test/src`` contains the java code.
 
 '''''embl_person_dir_test/src/client/personExpo''''' contains the front-end code.
 
