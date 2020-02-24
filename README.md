@@ -1,7 +1,7 @@
 
-#EMBL Test
+# EMBL Test
 
-##Application
+## Application
 
 ( nb : Assuming both maven & angular-cli installed globally)
 
