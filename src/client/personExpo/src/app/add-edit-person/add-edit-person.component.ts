@@ -61,9 +61,9 @@ export class AddEditPersonComponent implements OnInit {
     }
 
     this.angForm = new FormGroup({
-      firstName:      new FormControl('', [Validators.required, Validators.maxLength(60)]),
-      lastName:       new FormControl('', [Validators.required, Validators.maxLength(60)]),
-      age:            new FormControl('', [Validators.required]),
+      firstName:      new FormControl('', [Validators.required, Validators.maxLength(60), Validators.pattern('^[a-zA-Z]*$')]),
+      lastName:       new FormControl('', [Validators.required, Validators.maxLength(60), Validators.pattern('^[a-zA-Z]*$')]),
+      age:            new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$'), Validators.max(120), Validators.min(18)]),
       colorCombined:  new FormControl('', []),
       hobbies :       new FormControl('', [Validators.required]),
     });

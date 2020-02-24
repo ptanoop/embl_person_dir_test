@@ -9,5 +9,4 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(origins = {"http://localhost:4200", "http://localhost:9876"})
 public interface PersonRepository extends PagingAndSortingRepository<Person, Integer> {
 
-
 }
