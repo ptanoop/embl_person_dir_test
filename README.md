@@ -9,31 +9,31 @@ This is a maven project using spring boot. A front-end application built using a
 
 So directory structure is 
 
-embl_person_dir_test/src contains the java code.
+'''''embl_person_dir_test/src''''' contains the java code.
 
-embl_person_dir_test/src/client/personExpo contains the front-end code.
+'''''embl_person_dir_test/src/client/personExpo''''' contains the front-end code.
 
 Running in development mode.
 
 Please navigate to embl_person_dir_test and use following commands
 
-mvn install 
+''mvn install''
 
-mvn spring-boot:run
+''mvn spring-boot:run''
 
-This will up java application on localhost:8080
+This will up java application on '''localhost:8080'''
 
-Navigate to localhost:8080, rest api explorer will display available apis.
+Navigate to '''localhost:8080''', rest api explorer will display available apis.
 
 
 
-Please navigate to embl_person_dir_test/src/client/personExpo and use following commands
+Please navigate to '''''embl_person_dir_test/src/client/personExpo''''' and use following commands
 
-npm install 
+''npm install'' 
 
-ng serve
+''ng serve''
 
-This will run angular application on localhost:4200
+This will run angular application on '''localhost:4200'''
 
-Navigate to localhost:4200, which will help to interact with applications.
+Navigate to '''localhost:4200''', which will help to interact with applications.
 
